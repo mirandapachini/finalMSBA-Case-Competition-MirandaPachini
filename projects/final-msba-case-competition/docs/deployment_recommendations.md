@@ -106,4 +106,3 @@ A real‑world deployment of the churn model would use:
 - **Scheduled Python or SQL pipelines**
 - **Database or CRM storage for predictions**
 - **Monitoring for data quality, drift, and real‑world performance**
-

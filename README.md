@@ -23,10 +23,10 @@ The final model used **CatBoost** and earned an out-of-sample **ROC–AUC of 0.8
 This repository contains:
 - `notebooks/telecom_churn_analysis.ipynb` — the full individual analysis and modeling workflow
 - `notebooks/holdout_scoring.ipynb` — holdout scoring and unseen data results
-- `individual/personal_contribution.md` — my personal contribution summary
-- `individual/data_sources_analysis.md` — Track 1 business data source analysis
-- `individual/implementation_strategy.md` — Track 2 implementation and success metrics
-- `individual/deployment_recommendations.md` — Track 3 deployment and production usage plan
+- `projects/final-msba-case-competition/docs/personal_contribution.md` — my personal contribution summary
+- `projects/final-msba-case-competition/docs/data_sources_analysis.md` — Track 1 business data source analysis
+- `projects/final-msba-case-competition/docs/implementation_strategy.md` — Track 2 implementation and success metrics
+- `projects/final-msba-case-competition/docs/deployment_recommendations.md` — Track 3 deployment and production usage plan
 - `group/presentation/telecom_churn_presentation.pptx` — team presentation slides
 
 ## Skills demonstrated
@@ -47,9 +47,10 @@ The analysis identifies high-risk customer segments and retention levers, includ
 Recommended actions focus on batch scoring, CRM integration, targeted outreach, and measuring churn reduction without sacrificing ARPU.
 
 ## What to look for first
-1. Open `notebooks/churn_case_competition.ipynb` for the full data science workflow.
-2. Review `individual/personal_contribution.md` for the specific role I played.
-3. Read `individual/implementation_strategy.md` and `individual/deployment_recommendations.md` for deployment-ready recommendations and operational thinking.
+Or view the curated project page for a recruiter-friendly layout: [projects/final-msba-case-competition/README.md](projects/final-msba-case-competition/README.md)
+1. Open `notebooks/telecom_churn_analysis.ipynb` for the full data science workflow.
+2. Review `projects/final-msba-case-competition/docs/personal_contribution.md` for the specific role I played.
+3. Read `projects/final-msba-case-competition/docs/implementation_strategy.md` and `projects/final-msba-case-competition/docs/deployment_recommendations.md` for deployment-ready recommendations and operational thinking.
 4. Open `group/presentation/telecom_churn_presentation.pptx` for the polished team summary.
 
 ## How to run

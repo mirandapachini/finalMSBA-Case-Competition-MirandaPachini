@@ -37,5 +37,3 @@ To mitigate these risks, we would:
   - **Cluster 2:** loyalty rewards + upsell opportunities  
   - **Cluster 0:** VIP support + proactive issue resolution  
 - Monitor operational load and adjust outreach volume accordingly
-
-
