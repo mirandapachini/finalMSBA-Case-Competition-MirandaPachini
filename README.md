@@ -1,116 +1,71 @@
-# MSBA-Case-Competition-MirandaPachini
-# TruSource Telecom Churn Prediction Project
+# MSBA Case Competition — TruSource Telecom Churn Prediction
 
-## Overview
-This repository contains my individual work for the MSBA Case Competition focused on predicting customer churn for TruSource, a subscription‑based telecom provider. The project integrates predictive modeling, exploratory data analysis, feature engineering, and customer segmentation to identify the drivers of churn and develop actionable retention strategies.
+## Why this project matters to employers
+This repository showcases a complete end-to-end analytics solution for predicting customer churn in a subscription-based telecom business. It highlights my ability to translate business problems into data-driven insights, engineer predictive features, build and compare models, and turn results into actionable retention strategies.
 
-The goal is to help TruSource reduce its churn rate of **26.54%**, improve customer lifetime value, and support data‑driven decision‑making across marketing, customer success, and operations.
+Employers can use this project to evaluate my skills in:
+- business problem framing and stakeholder communication
+- exploratory data analysis and feature engineering
+- supervised modeling and model validation
+- customer segmentation and deployment planning
+- clear documentation and organized delivery
 
----
+## Project summary
+TruSource faced a churn rate of **26.54%**. I built a pipeline to:
+- analyze churn drivers across customer demographics, service usage, and billing
+- engineer meaningful features for customer behavior and service intensity
+- evaluate multiple models and select the best-performing solution
+- segment customers with clustering to make retention recommendations more actionable
 
-## Repository Structure
+The final model used **CatBoost** and earned an out-of-sample **ROC–AUC of 0.896**.
 
----
+## What I delivered
+This repository contains:
+- `notebooks/telecom_churn_analysis.ipynb` — the full individual analysis and modeling workflow
+- `notebooks/holdout_scoring.ipynb` — holdout scoring and unseen data results
+- `individual/personal_contribution.md` — my personal contribution summary
+- `individual/data_sources_analysis.md` — Track 1 business data source analysis
+- `individual/implementation_strategy.md` — Track 2 implementation and success metrics
+- `individual/deployment_recommendations.md` — Track 3 deployment and production usage plan
+- `group/presentation/telecom_churn_presentation.pptx` — team presentation slides
 
-## Project Components
+## Skills demonstrated
+- Python analytics and notebook development
+- feature engineering for customer churn and billing signals
+- model selection with Decision Tree, Random Forest, XGBoost, and CatBoost
+- handling class imbalance and avoiding overfitting
+- interpreting model output for business decisions
+- customer segmentation with PCA and K-Means clustering
+- business-focused recommendation development
 
-### **1. Exploratory Data Analysis (EDA)**
-Key insights:
-- Early‑tenure customers churn at significantly higher rates  
-- Month‑to‑month contracts are the highest‑risk group  
-- Customers without tech support churn more frequently  
-- Fiber optic customers show elevated churn due to performance expectations  
-- Higher service counts and higher service intensity correlate with lower churn  
+## Business impact
+The analysis identifies high-risk customer segments and retention levers, including:
+- early-tenure customers on month-to-month contracts
+- customers without tech support
+- fiber-optic customers with billing or service dissatisfaction
 
-These insights guided feature engineering and model selection.
+Recommended actions focus on batch scoring, CRM integration, targeted outreach, and measuring churn reduction without sacrificing ARPU.
 
----
+## What to look for first
+1. Open `notebooks/churn_case_competition.ipynb` for the full data science workflow.
+2. Review `individual/personal_contribution.md` for the specific role I played.
+3. Read `individual/implementation_strategy.md` and `individual/deployment_recommendations.md` for deployment-ready recommendations and operational thinking.
+4. Open `group/presentation/telecom_churn_presentation.pptx` for the polished team summary.
 
-### **2. Feature Engineering**
-I engineered several new variables to capture customer behavior more effectively:
-- **avg_monthly_bill**, **avg_monthly_extra_fees**, **avg_monthly_long_dist_fee**
-- **count_of_reg_services**, **count_of_streaming_services**, **count_of_add_on_services**
-- **total_services**
-- Adjusted tenure to avoid division by zero
-- Encoded missing categorical values meaningfully (e.g., “none”)
+## How to run
+1. Install Python packages used in the notebook: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `catboost`.
+2. Open the notebooks in Jupyter or VS Code.
+3. Run cells from top to bottom to reproduce the analysis.
 
-These features improved model interpretability and predictive power.
-
----
-
-### **3. Predictive Modeling**
-Four supervised learning models were evaluated:
-- Decision Tree  
-- Random Forest  
-- XGBoost  
-- CatBoost  
-
-**CatBoost** achieved the highest performance with an ROC–AUC of **0.896**, outperforming all other models. It was selected as the final model due to its ability to handle categorical variables, capture nonlinear interactions, and generalize well.
-
-Class imbalance was addressed using:
-- Stratified train/test split  
-- Class weighting in the modeling pipeline  
-
----
-
-### **4. Clustering & Customer Segmentation**
-Using PCA and K‑Means (k=3), we identified three meaningful customer segments:
-
-- **Cluster 1:** New, low‑value, high‑risk customers (43% churn)  
-- **Cluster 2:** Established, moderate‑value, low‑risk customers (12% churn)  
-- **Cluster 0:** High‑value, long‑tenured, low‑risk customers (14% churn)  
-
-These segments informed differentiated retention strategies.
-
----
-
-### **5. Retention Strategy Recommendations**
-Based on modeling + segmentation:
-
-- **Cluster 1:** Onboarding, early‑tenure support, simple plans, proactive outreach  
-- **Cluster 2:** Loyalty rewards, upsell opportunities, referral incentives  
-- **Cluster 0:** VIP support, priority issue resolution, premium loyalty benefits  
-
-These strategies align with the business value and churn risk of each segment.
+## Notes for future employers
+This repository is intentionally organized for review:
+- notebooks are separated from write-ups
+- individual deliverables are easy to find
+- business insights are distilled into short, employer-facing summaries
+- the model and recommendations are grounded in measurable churn-reduction priorities
 
 ---
 
-### **6. Deployment & Monitoring (Track 3)**
-A real telecom company would deploy the churn model using:
-- **Overnight batch scoring**
-- **Scheduled Python or SQL pipelines**
-- **CRM integration (Salesforce, HubSpot, Dynamics, Zoho)**
-
-Monitoring includes:
-- Data quality checks  
-- Feature drift detection  
-- Model performance tracking (AUC, lift, calibration)  
-
----
-
-## Files Included
-- **Notebook:** Full modeling workflow (EDA → Feature Engineering → Models → Clustering → Recommendations)  
-- **Holdout Set:** Predictions for the unseen dataset  
-- **Track Files:** Required individual write‑ups for Tracks 1–3  
-- **Contribution File:** Summary of my personal contributions  
-
----
-
-## How to Run the Notebook
-1. Install required Python packages (CatBoost, scikit‑learn, pandas, numpy, matplotlib, seaborn).  
-2. Open the `.ipynb` notebook in Jupyter or VS Code.  
-3. Run cells in order — the notebook includes preprocessing, modeling, evaluation, and segmentation.  
-
----
-
-## Group Presentation
-A copy of the final team presentation is located in `group/presentation/`. 
-These slides summarize the team’s analysis, modeling decisions, and recommendations. 
-They are included in this repository for completeness and portfolio visibility.
-
----
-
-## Author
-**Miranda Pachini**  
-MSBA Candidate, University of Louisville  
+**Miranda Pachini**
+MSBA Candidate, University of Louisville
 Business Analytics & Predictive Modeling
